@@ -1,0 +1,18 @@
+// main: ../style.scss
+.btn{
+  display: block;
+  max-width: 224px;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  background: $green;
+  border: 1px solid $green;
+  transition: all .3s ease-in-out;
+}
+@media (hover:hover){
+  .btn:hover{
+    color: $green;
+    background: white;
+  }
+}
