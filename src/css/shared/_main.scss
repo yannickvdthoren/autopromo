@@ -1,0 +1,36 @@
+// main: ../style.scss
+.ads{
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 300px 320px 60px 216px 276px;
+  grid-template-rows: 90px 250px 206px 50px 22px;
+  grid-template-areas: 
+  "megaban megaban megaban . ."
+  "gigapave interstitiel pave pave ."
+  "gigapave interstitiel email-offre email-offre email-offre"
+  "gigapave miniban email-offre email-offre email-offre"
+  "gigapave miniban . . .";
+  margin-left: 140px;
+  padding-right: 24px;
+}
+.ads__item{
+  background: $lightGreen;
+}
+#megaban{
+  grid-area: megaban;
+}
+#gigapave{
+  grid-area: gigapave;
+}
+#interstitiel{
+  grid-area: interstitiel;
+}
+#pave{
+  grid-area: pave;
+}
+#email-offre{
+  grid-area: email-offre;
+}
+#miniban{
+  grid-area: miniban;
+}

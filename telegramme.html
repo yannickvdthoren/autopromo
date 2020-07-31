@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>Création auto-promo</title>
+	<link rel="stylesheet" href="https://use.typekit.net/lkz3lyw.css">
+	<link rel="stylesheet" type="text/css" href="./dist/style.css">
+</head>
+<body class="home">
+  <input type="radio" name="step" value="step1" id="step1" checked hidden>
+	<input type="radio" name="step" value="step2" id="step2" hidden>
+	<input type="radio" name="step" value="step3" id="step3" hidden>
+	<aside class="menu">
+		<h1 class="menu__title">Création <br>auto-promo</h1>
+		<div class="menu__progress">
+			<p class="menu__progress__step"><span class="menu__progress__number">2/4</span>Nom de la campagne</p>
+			<progress class="menu__progress__bar" value="50" max="100"></progress>
+		</div>
+
+    <div class="menu__steps__btn">
+      <div id="btn__step1">
+        <label for="step2" class="btn" id="step1btn">Commencer à créer !</label>
+        <a href="index.html" class="btn back">Retour</a>
+      </div>
+      <div id="btn__step2">
+        <label for="step3" class="btn" id="step2btn">Personnaliser</label>
+        <label for="step1" class="btn back">Retour</label>
+      </div>
+      <div id="downloadBtns">
+        <a href="#" id="btn-Convert-Html2Image" class="btn">Télécharger mes créations</a>
+        <label for="step2" class="btn back">Retour</label>
+			</div>
+    </div>
+	</aside>
+	<main class="ads">
+			<div class="ads__item" id="megaban"></div>
+			<div class="ads__item" id="gigapave"></div>
+			<div class="ads__item" id="interstitiel"></div>
+			<div class="ads__item" id="miniban"></div>
+			<div class="ads__item" id="pave"></div>
+			<div class="ads__item" id="email-offre"></div>
+	</main>
+</body>
+</html>
