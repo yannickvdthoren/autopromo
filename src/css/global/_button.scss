@@ -10,9 +10,29 @@
   transition: all .3s ease-in-out;
   cursor: pointer;
 }
+.btn.back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: $green;
+  border: none;
+}
+.btn.back::before{
+  content: "";
+  padding: 2px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  border: solid;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
 @media (hover:hover){
   .btn:hover{
     color: $green;
     background: white;
+  }
+  .btn.back:hover{
+    color: $darkGreen;
   }
 }

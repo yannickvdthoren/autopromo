@@ -6,39 +6,91 @@
 	<link rel="stylesheet" href="https://use.typekit.net/lkz3lyw.css">
 	<link rel="stylesheet" type="text/css" href="./dist/style.css">
 </head>
-<body class="home">
-  <input type="radio" name="step" value="step1" id="step1" checked hidden>
-	<input type="radio" name="step" value="step2" id="step2" hidden>
-	<input type="radio" name="step" value="step3" id="step3" hidden>
+<body class="creation">
 	<aside class="menu">
+		<input type="radio" name="step" value="step1" id="input__step1" checked hidden>
+		<input type="radio" name="step" value="step2" id="input__step2" hidden>
+		<input type="radio" name="step" value="step3" id="input__step3" hidden>
+
 		<h1 class="menu__title">Création <br>auto-promo</h1>
 		<div class="menu__progress">
-			<p class="menu__progress__step"><span class="menu__progress__number">2/4</span>Nom de la campagne</p>
-			<progress class="menu__progress__bar" value="50" max="100"></progress>
+			<div id="progress1">
+				<p class="menu__progress__step"><span class="menu__progress__number">1/3</span>Choisir un nom</p>
+				<progress class="menu__progress__bar" value="33" max="100"></progress>
+			</div>
+			<div id="progress2">
+				<p class="menu__progress__step"><span class="menu__progress__number">2/3</span>Ajouter une image</p>
+				<progress class="menu__progress__bar" value="66" max="100"></progress>
+			</div>
+			<div id="progress3">
+				<p class="menu__progress__step"><span class="menu__progress__number">3/3</span>Et finissons avec du texte</p>
+				<progress class="menu__progress__bar" value="100" max="100"></progress>
+			</div>
+		</div>
+
+		<div class="menu__content">
+			<h2 class="menu__content__details" id="site__name"><span class="labels">Projet pour</span>Le Télégramme</h2>
+		</div>
+
+		<div class="steps" id="step1">
+			<label class="labels">Nom de la campagne
+				<input type="text" id="campaign__name" placeholder="ex : les poneys à la piscine">
+			</label>
+
+			<span class="note">
+				Note : Il sera utilisé pour nommer les fichiers.
+			</span>
+		</div>
+
+		<div class="steps" id="step2">
+			<label class="labels">Image
+				<input type="file" id="ads__image">
+			</label>
+		</div>
+
+		<div class="steps" id="step3">
+			<label class="labels">Titre
+				<input type="text" id="ads__title" placeholder="ex : Les poneys à la piscine">
+			</label>
+
+			<label class="labels">Texte
+				<input type="text" id="ads__text" placeholder="ex : Découvrez leur folle journée">
+			</label>
+
+			<label class="labels">CTA
+				<input type="text" id="ads__cta" placeholder="ex : Voir les poneys">
+			</label>
+
+			<span class="note">
+				Note : Vous pourrez modifier les pavés un par un dans la prochaine étape.
+			</span>
 		</div>
 
     <div class="menu__steps__btn">
-      <div id="btn__step1">
-        <label for="step2" class="btn" id="step1btn">Commencer à créer !</label>
+      <div id="btn__step1" class="menu__steps__btns">
+        <label for="input__step2" class="btn" id="step1btn">Ajouter une image</label>
         <a href="index.html" class="btn back">Retour</a>
-      </div>
-      <div id="btn__step2">
-        <label for="step3" class="btn" id="step2btn">Personnaliser</label>
-        <label for="step1" class="btn back">Retour</label>
-      </div>
-      <div id="downloadBtns">
-        <a href="#" id="btn-Convert-Html2Image" class="btn">Télécharger mes créations</a>
-        <label for="step2" class="btn back">Retour</label>
 			</div>
+			<div id="btn__step2" class="menu__steps__btns">
+        <label for="input__step3" class="btn" id="step1btn">Ajouter du contenu</label>
+        <label for="input__step1" class="btn back">Retour</label>
+      </div>
+      <div id="btn__step3" class="menu__steps__btns">
+        <a href="#" id="btn-Convert-Html2Image" class="btn">Télécharger mes créations</a>
+        <label for="input__step2" class="btn back">Retour</label>
+      </div>
     </div>
 	</aside>
 	<main class="ads">
-			<div class="ads__item" id="megaban"></div>
-			<div class="ads__item" id="gigapave"></div>
-			<div class="ads__item" id="interstitiel"></div>
-			<div class="ads__item" id="miniban"></div>
-			<div class="ads__item" id="pave"></div>
-			<div class="ads__item" id="email-offre"></div>
+			<iframe src="./formats/tlg-megaban.html" class="ads__item" id="megaban"></iframe>
+			<!-- <iframe src="./formats/tlg-gigapave.html" class="ads__item" id="gigapave"></iframe> -->
+			<iframe src="./formats/tlg-interstitiel.html" class="ads__item" id="interstitiel"></iframe>
+			<iframe src="./formats/tlg-miniban.html" class="ads__item" id="miniban"></iframe>
+			<iframe src="./formats/tlg-pave.html" class="ads__item" id="pave"></iframe>
+			<iframe src="./formats/tlg-email.html" class="ads__item" id="offre"></iframe>
+			<!-- <iframe src="./formats/tlg-facebook.html" class="ads__item" id="facebook"></iframe>  -->
 	</main>
 </body>
+<script src="./dist/dom-to-image.js"></script>
+<script src="./dist/script.js"></script>
 </html>

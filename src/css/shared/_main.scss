@@ -1,16 +1,18 @@
 // main: ../style.scss
+.home{
+  overflow: hidden
+}
 .ads{
   display: grid;
-  grid-gap: 24px;
-  grid-template-columns: 300px 320px 60px 216px 276px;
-  grid-template-rows: 90px 250px 206px 50px 22px;
   grid-template-areas: 
-  "megaban megaban megaban . ."
-  "gigapave interstitiel pave pave ."
-  "gigapave interstitiel email-offre email-offre email-offre"
-  "gigapave miniban email-offre email-offre email-offre"
-  "gigapave miniban . . .";
-  margin-left: 140px;
+  'megaban megaban megaban' 
+  'gigapave interstitiel pave'
+  'gigapave interstitiel email'
+  'gigapave miniban email'
+  'facebook facebook facebook';
+  grid-gap: 16px;
+  align-items: flex-start;
+  margin-left: 24px;
   padding-right: 24px;
 }
 .ads__item{
@@ -18,19 +20,37 @@
 }
 #megaban{
   grid-area: megaban;
+  width: 728px;
+  height: 90px;
 }
 #gigapave{
   grid-area: gigapave;
+  width: 300px;
+  height: 600px;
 }
 #interstitiel{
   grid-area: interstitiel;
+  width: 320px;
+  height: 480px;
 }
 #pave{
   grid-area: pave;
+  width: 300px;
+  height: 250px;
 }
-#email-offre{
-  grid-area: email-offre;
+#offre{
+  grid-area: email;
+  width: 590px;
+  height: 280px;
 }
 #miniban{
   grid-area: miniban;
+  width: 320px;
+  height: 100px;
+}
+#facebook{
+  grid-area: facebook;
+  width: 1200px;
+  height: 1200px;
+  transform: scale(.5);
 }
